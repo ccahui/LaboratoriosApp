@@ -1,2 +1,96 @@
-<p>alumnos works!</p>
 <a routerLink="crear">Crear Alumno</a>
+
+
+<div class="col-12">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Alumnos</h4>
+
+
+      <h6 class="card-subtitle">Add<code>.table-bordered</code>for borders on all sides of the table and cells.</h6>
+
+      <button type="button" class="btn btn-success btn-rounded m-t-10" data-toggle="modal" data-target="#exampleModal"><i
+          class='fa fa-plus'></i> Cargar Alumnos</button>
+      <a routerLink="crear" class="btn btn-info btn-rounded float-right"><i class='fa fa-plus'></i> Nuevo Alumno</a>
+
+      <div class="pt-5">
+        <input type="search" class="form-control form-control-sm" placeholder="Buscar">
+      </div>
+
+
+      <div class="table-responsive pt-3">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Cui</th>
+              <th>Apellidos</th>
+              <th>Nombre</th>
+              <th>Tercio</th>
+              <th>Estado</th>
+              <th class="text-nowrap">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>20150937</td>
+              <td>
+                Hanna Gover
+              </td>
+              <td>Hanna</td>
+              <td>1</td>
+              <td>
+
+                <input type="checkbox" id="md_checkbox_21" class="filled-in chk-col-light-blue" checked="">
+                <label for="md_checkbox_21">Habilitado</label>
+              </td>
+
+              <td class="text-nowrap">
+                <!-- Example single danger a -->
+                <div class="btn-group">
+                  <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Action
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item btn-sm" href="#">Editar</a>
+                    <a class="dropdown-item btn-sm" href="#">Eliminar</a>
+
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal-->
+<div class="modal fade in show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
+  aria-hidden="true" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel1">Cargar Alumnos</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Alumnos Excel</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" accept=".xls,.xlsx">
+              </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
