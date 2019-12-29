@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AlumnosComponent } from './alumnos/alumnos.component';
 import { CrearComponent } from './crear/crear.component';
 import { EditarComponent } from './editar/editar.component';
+import { ListarComponent } from './listar/listar.component';
 
 
 const routes: Routes = [
   {
-    path: '', pathMatch: 'full', component: AlumnosComponent,
+    path: '', pathMatch: 'full', component: ListarComponent,
   }, {
     path: 'crear', component: CrearComponent,
   },  {
