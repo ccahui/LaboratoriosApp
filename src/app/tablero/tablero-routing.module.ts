@@ -20,6 +20,10 @@ const routes: Routes = [
   },  {
     path: 'administradores', component: TableroComponent,
     loadChildren: () => import('../administradores/administradores.module').then(m => m.AdministradoresModule)
+  },
+  {
+    path: 'cursos', component: TableroComponent,
+    loadChildren: () => import('../cursos/cursos.module').then(m => m.CursosModule)
   }
 ];
 
