@@ -13,7 +13,6 @@ import { AlumnosModule } from '../alumnos/alumnos.module';
     CommonModule,
     TableroRoutingModule,
     CompartirModule,
-    AlumnosModule
   ]
 })
 export class TableroModule { }

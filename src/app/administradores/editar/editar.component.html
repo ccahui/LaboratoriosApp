@@ -1,0 +1,81 @@
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex no-block align-items-center">
+                <div>
+                    <h4 class="card-title">Registrar</h4>
+                    <h6 class="card-subtitle"> Complete el formulario de administradores</h6>
+                </div>
+            </div>
+            
+            <form class="form">
+            
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label">Nombres*</label>
+                    <div class="col-md-10">
+                        <input class="form-control" value="How do I shoot web">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label">Apellidos</label>
+                    <div class="col-md-10">
+                        <input class="form-control" value="bootstrap@example.com">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label">Descripcion</label>
+                    <div class="col-md-10">
+                        <div class="form-check">
+                            <input class="form-check-input with-gap" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label"  for="exampleRadios1">
+                              Director
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input with-gap" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                              Secretaria
+                            </label>
+                          </div>
+                          <div class="form-check disabled">
+                            <input class="form-check-input with-gap" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                            <label class="form-check-label" for="exampleRadios3">
+                              Técnico
+                            </label>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label">Descripcion</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control"  value="https://getbootstrap.com"></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label">Email</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="email" value="https://getbootstrap.com">
+                    </div>
+                </div>
+              
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label">Estado</label>
+                    <div class="col-md-10">
+                        <select class="custom-select col-12">
+                            <option value="1" selected>Habilitado</option>
+                            <option value="2">Desabilitado</option>
+                        </select>
+                    </div>
+                </div>
+              
+                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Registrar</button>
+                <a routerLink=".." class="btn btn-inverse waves-effect waves-light">Cancelar</a>
+            </form>
+            
+        </div>
+    </div>
+</div>
+

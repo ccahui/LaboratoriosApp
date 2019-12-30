@@ -9,11 +9,17 @@ const routes: Routes = [
     path: '', component: TableroComponent,
     children: [
       { path: 'perfil', component: PerfilComponent },
-      { path: '', pathMatch: 'full', redirectTo: 'perfil' },
+      { path: '', pathMatch: 'full', redirectTo: '/perfil' },
     ]
   }, {
     path: 'alumnos', component: TableroComponent,
     loadChildren: () => import('../alumnos/alumnos.module').then(m => m.AlumnosModule)
+  }, {
+    path: 'docentes', component: TableroComponent,
+    loadChildren: () => import('../profesores/profesores.module').then(m => m.ProfesoresModule)
+  },  {
+    path: 'administradores', component: TableroComponent,
+    loadChildren: () => import('../administradores/administradores.module').then(m => m.AdministradoresModule)
   }
 ];
 

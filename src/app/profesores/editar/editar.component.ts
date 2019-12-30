@@ -10,7 +10,6 @@ export class EditarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('hola');
   }
 
 }
