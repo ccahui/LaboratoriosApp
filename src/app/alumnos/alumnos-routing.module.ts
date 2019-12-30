@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CrearComponent } from './crear/crear.component';
 import { EditarComponent } from './editar/editar.component';
 import { ListarComponent } from './listar/listar.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 
 const routes: Routes = [
@@ -10,7 +11,10 @@ const routes: Routes = [
     path: '', pathMatch: 'full', component: ListarComponent,
   }, {
     path: 'crear', component: CrearComponent,
-  },  {
+  },
+  {
+    path: 'detalle', component: DetalleComponent,
+  },    {
     path: ':id', component: EditarComponent,
   }
 ];

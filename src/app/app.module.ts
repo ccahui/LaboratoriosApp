@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule} from './auth/auth.module';
 import { TableroModule } from './tablero/tablero.module';
+
 @NgModule({
   declarations: [
     AppComponent,
