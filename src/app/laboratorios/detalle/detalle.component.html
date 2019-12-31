@@ -1,0 +1,138 @@
+<div class="card">
+  <div class="card-body">
+    <form class="form-horizontal" role="form">
+      <div class="form-body">
+
+        <a routerLink="../5" class="btn btn-danger mr-2 btn-rounded float-right"> <i class="fa fa-pencil"></i>
+          Editar</a> 
+          <a routerLink=".." class="btn btn-inverse mr-2 btn-rounded float-right"> 
+            Cancelar</a>
+        <h3 class="mt-2">Información Académica</h3>
+        <h6 class="card-subtitle">Información académica laboratorios</h6>
+
+        <hr class="m-t-0 m-b-40">
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="control-label text-md-right col-md-3">Nombre</label>
+              <div class="col-md-9">
+                <p class="form-control-static">Introducción a la Computación</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="control-label text-md-right col-md-3">Profesor</label>
+              <div class="col-md-9">
+                <p class="form-control-static">Marco Aedo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="control-label text-md-right col-md-3">Grupo</label>
+              <div class="col-md-9">
+                <p class="form-control-static">A</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="control-label text-md-right col-md-3">Cupos</label>
+              <div class="col-md-9">
+                <p class="form-control-static">20</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/row-->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="control-label text-md-right col-md-3">Descripcion</label>
+              <div class="col-md-9">
+                <p class="form-control-static text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Saepe cum dolor perspiciatis nobis dolore? Tempora qui laboriosam ab ad voluptatibus, assumenda quo
+                  necessitatibus autem quibusdam dolor officiis quidem, nobis accusamus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--/row-->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="control-label text-md-right col-md-3">Creado</label>
+              <div class="col-md-9">
+                <p class="form-control-static text-justify">2019-12-30 16:39:28</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="control-label text-md-right col-md-3">Modificado</label>
+              <div class="col-md-9">
+                <p class="form-control-static text-justify">2019-12-30 16:40:28</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!--/span-->
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="control-label text-md-right col-md-3">Estado</label>
+              <div class="col-md-9">
+                <p class="form-control-static"> Habilitado </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+      
+
+
+
+
+      <h3 class="mt-2">Información de matriculados</h3>
+      <h6 class="card-subtitle">Alumnos matriculados</h6>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Apellidos</th>
+                  <th>Nombre</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of [1,1,1,1,1,1,1,1]; let i = index">
+                  <td class="text-right">{{i+1}}</td>
+                  <td>Hanna Gover</td>
+                  <td>Hanna</td>
+    
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+     
+
+
+    </form>
+  </div>
+</div>

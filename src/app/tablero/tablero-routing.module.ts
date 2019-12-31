@@ -24,6 +24,9 @@ const routes: Routes = [
   {
     path: 'cursos', component: TableroComponent,
     loadChildren: () => import('../cursos/cursos.module').then(m => m.CursosModule)
+  },   {
+    path: 'laboratorios', component: TableroComponent,
+    loadChildren: () => import('../laboratorios/laboratorios.module').then(m => m.LaboratoriosModule)
   }
 ];
 
