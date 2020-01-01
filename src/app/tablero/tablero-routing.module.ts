@@ -27,6 +27,9 @@ const routes: Routes = [
   },   {
     path: 'laboratorios', component: TableroComponent,
     loadChildren: () => import('../laboratorios/laboratorios.module').then(m => m.LaboratoriosModule)
+  }, {
+    path: 'cronograma', component: TableroComponent,
+    loadChildren: () => import('../cronograma/cronograma.module').then(m => m.CronogramaModule)
   }
 ];
 
