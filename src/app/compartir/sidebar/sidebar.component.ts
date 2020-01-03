@@ -32,12 +32,13 @@ export class SidebarComponent implements OnInit {
         icono: 'fa fa-folder',
         url: '/cronograma'
     },
-    {
-        titulo: 'Rematriculas',
-        icono: 'fa fa-folder',
-        url: '/rematriculas'
-    }
 ];
+
+menusAlumno = [{
+    titulo: 'Alumnos-Inicio',
+    icono: 'fa fa-dashboard',
+    url: '/alumno'
+}];
 
     constructor() { }
 

@@ -30,6 +30,9 @@ const routes: Routes = [
   }, {
     path: 'cronograma', component: TableroComponent,
     loadChildren: () => import('../cronograma/cronograma.module').then(m => m.CronogramaModule)
+  }, {
+    path: 'alumno', component: TableroComponent,
+    loadChildren: () => import('../alumno/alumno.module').then(m => m.AlumnoModule)
   }
 ];
 

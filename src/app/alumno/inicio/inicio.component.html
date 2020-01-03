@@ -1,0 +1,85 @@
+<div class="col-12">
+  <div class="card">
+    <div class="card-body">
+      <div class="d-flex no-block align-items-center">
+        <div>
+          <h4 class="card-title">Cronograma</h4>
+          <h6 class="card-subtitle"> Fechas de acceso matriculas</h6>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered text-center">
+          <thead>
+            <tr>
+              <th class="text-center">Grupo</th>
+              <th class="text-center">A partir de ...</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Grupo 1</td>
+              <td>31/12/2019<i class='fa fa-calendar-check-o ml-2' style="font-size: 20px;"></i></td>
+            </tr>
+            <tr>
+              <td>Grupo 2</td>
+              <td>31/12/2019<i class='fa fa-calendar-check-o ml-2' style="font-size: 20px;"></i></td>
+            </tr>
+            <tr>
+              <td>Grupo 3</td>
+              <td>31/12/2019<i class='fa fa-calendar-check-o ml-2' style="font-size: 20px;"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="card">
+
+
+    <div class="card-body">
+      <h4>Subir Constancia de Matricula</h4>
+      <div class="table-responsive">
+        <table class="table table-bordered text-center">
+          <thead>
+            <tr>
+              <th class="text-center">Estado</th>
+              <th class="text-center"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>No has subido tu constancia de Matricula</td>
+              <td>
+                <form >
+                  <div class="form-group">
+                    <input type="file" class="form-control-file" [(ngModel)]="file" name="file" accept=".pdf">
+                  </div>
+                  <button type="button" class="btn btn-primary" (click)="cargarConstancia()">Subir</button>
+                  <button type="reset" class="btn btn-default ml-2" (click)="resetFile()">Cancelar</button>
+                </form>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="card">
+    <div class="card-body">
+        
+      <h5 class="d-inline-block mr-3 text-danger">FELICIDADES Usted puede proceder a iniciar su matricula</h5>
+      <a routerLink="matricularse" class="btn btn-info">Iniciar Matricula</a>  
+    </div>
+  </div>
+</div>

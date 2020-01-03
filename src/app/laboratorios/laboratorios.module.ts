@@ -8,10 +8,11 @@ import { CrearComponent } from './crear/crear.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { CompartirModule } from '../compartir/compartir.module';
 import { FormsModule } from '@angular/forms';
+import { AlumnosComponent } from './alumnos/alumnos.component';
 
 
 @NgModule({
-  declarations: [ListarComponent, EditarComponent, CrearComponent, DetalleComponent],
+  declarations: [ListarComponent, EditarComponent, CrearComponent, DetalleComponent, AlumnosComponent],
   imports: [
     CommonModule,
     LaboratoriosRoutingModule,
