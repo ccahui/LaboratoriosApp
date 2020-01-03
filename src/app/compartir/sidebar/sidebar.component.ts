@@ -40,6 +40,12 @@ menusAlumno = [{
     url: '/alumno'
 }];
 
+menusDocente = [{
+    titulo: 'Docente-Inicio',
+    icono: 'fa fa-dashboard',
+    url: '/docente'
+}];
+
     constructor() { }
 
     ngOnInit() {

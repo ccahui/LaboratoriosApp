@@ -33,6 +33,10 @@ const routes: Routes = [
   }, {
     path: 'alumno', component: TableroComponent,
     loadChildren: () => import('../alumno/alumno.module').then(m => m.AlumnoModule)
+  },
+  {
+    path: 'docente', component: TableroComponent,
+    loadChildren: () => import('../profesor/profesor.module').then(m => m.ProfesorModule)
   }
 ];
 

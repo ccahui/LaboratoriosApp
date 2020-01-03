@@ -28,6 +28,10 @@
                 <li *ngFor="let menu of  menusAlumno"  routerLinkActive="active" >
                     <a [routerLink]="menu.url" class="waves-effect waves-dark" aria-expanded="false"><i [class]="menu.icono"></i><span class="hide-menu"> {{ menu.titulo }} </span></a>
                 </li>
+
+                <li *ngFor="let menu of  menusDocente"  routerLinkActive="active" >
+                    <a [routerLink]="menu.url" class="waves-effect waves-dark" aria-expanded="false"><i [class]="menu.icono"></i><span class="hide-menu"> {{ menu.titulo }} </span></a>
+                </li>
   
                 
             </ul>
