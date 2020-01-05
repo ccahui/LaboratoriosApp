@@ -11,11 +11,11 @@ export class AuthGuard implements CanActivate {
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     console.log('AuthGuard#canActivate called');
     const url = state.url;
-
     return this.checkLogin(url);
   }
 
   private checkLogin(url: string): boolean {
+    console.log(this.authService.isLoggedIn);
     if (this.authService.isLoggedIn) {
       return true;
     }

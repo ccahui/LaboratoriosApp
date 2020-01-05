@@ -10,28 +10,22 @@
                 <li class="user-profile">
                     <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                         <img src="assets/images/users/4.jpg" alt="user" />
-                        <span class="hide-menu">Hanna Gover</span>
+                        <span class="hide-menu text-nowrap">{{ auth.usuario.email }}</span>
                     </a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a routerLink="/perfil" routerLinkActive="active" class="pointer-sidebar">Perfil </a></li>
-                        <li><a routerLink="/login" class="pointer-sidebar">Logout</a></li>
+                        <li><a class="pointer-sidebar" (click)="logout()">Logout</a></li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>
                 <li class="nav-small-cap">PERSONAL</li>
   
   
-                <li *ngFor="let menu of  menus"  routerLinkActive="active" >
+                <li *ngFor="let menu of  auth.menu"  routerLinkActive="active" >
                     <a [routerLink]="menu.url" class="waves-effect waves-dark" aria-expanded="false"><i [class]="menu.icono"></i><span class="hide-menu"> {{ menu.titulo }} </span></a>
                 </li>
   
-                <li *ngFor="let menu of  menusAlumno"  routerLinkActive="active" >
-                    <a [routerLink]="menu.url" class="waves-effect waves-dark" aria-expanded="false"><i [class]="menu.icono"></i><span class="hide-menu"> {{ menu.titulo }} </span></a>
-                </li>
-
-                <li *ngFor="let menu of  menusDocente"  routerLinkActive="active" >
-                    <a [routerLink]="menu.url" class="waves-effect waves-dark" aria-expanded="false"><i [class]="menu.icono"></i><span class="hide-menu"> {{ menu.titulo }} </span></a>
-                </li>
+           
   
                 
             </ul>

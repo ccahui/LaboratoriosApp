@@ -18,8 +18,9 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log('hola');
+    console.log(this.auth.redirectUrl);
     this.auth.login().subscribe(() => {
+      console.log('redirect ', this.auth.redirectUrl);
       this.router.navigate([this.auth.redirectUrl]);
     });
   }

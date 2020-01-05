@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'app-sidebar',
@@ -6,49 +7,14 @@ import { Component, OnInit } from '@angular/core';
     styles: []
 })
 export class SidebarComponent implements OnInit {
-    menus = [{
-        titulo: 'Alumnos',
-        icono: 'fa fa-dashboard',
-        url: '/alumnos'
-    }, {
-        titulo: 'Docentes',
-        icono: 'fa fa-folder-open',
-        url: '/docentes'
-    }, {
-        titulo: 'Administradores',
-        icono: 'fa fa-folder',
-        url: '/administradores'
-    },  {
-        titulo: 'Cursos',
-        icono: 'fa fa-folder',
-        url: '/cursos'
-    },  {
-        titulo: 'Laboratorios',
-        icono: 'fa fa-folder',
-        url: '/laboratorios'
-    },
-    {
-        titulo: 'Cronograma',
-        icono: 'fa fa-folder',
-        url: '/cronograma'
-    },
-];
 
-menusAlumno = [{
-    titulo: 'Alumnos-Inicio',
-    icono: 'fa fa-dashboard',
-    url: '/alumno'
-}];
 
-menusDocente = [{
-    titulo: 'Docente-Inicio',
-    icono: 'fa fa-dashboard',
-    url: '/docente'
-}];
-
-    constructor() { }
+    constructor(public auth: AuthService) { }
 
     ngOnInit() {
+    }
+    logout() {
+        this.auth.logout();
     }
 
 }

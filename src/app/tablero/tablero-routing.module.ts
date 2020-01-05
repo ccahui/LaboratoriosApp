@@ -14,6 +14,7 @@ const routes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: '/perfil' },
     ]
   }, {
+    canActivate: [ AuthGuard ],
     path: 'alumnos', component: TableroComponent,
     loadChildren: () => import('../alumnos/alumnos.module').then(m => m.AlumnosModule)
   }, {
