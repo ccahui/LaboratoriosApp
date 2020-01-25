@@ -26,11 +26,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><a routerLink="detalle">20150937</a> </td>
-                <td>Hanna Gover</td>
-                <td>Hanna</td>
-                <td>1</td>
+              <tr *ngFor="let alumno of alumnos$ | async">
+                <td><a [routerLink]="alumno.id">{{ alumno.cui }}</a> </td>
+                <td>{{ alumno.apellido }}</td>
+                <td>{{ alumno.nombre }}</td>
+                <td>{{ alumno.grupo?.numero }}</td>
                 <td>
                   <input type="checkbox" id="md_checkbox_22" class="filled-in chk-col-light-blue" checked>
                   <label for="md_checkbox_22">Autorizado</label>
@@ -47,7 +47,7 @@
                       Action
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item btn-sm" routerLink='5'>Editar</a>
+                      <a class="dropdown-item btn-sm" [routerLink]="['editar', alumno.id ]">Editar</a>
                       <a class="dropdown-item btn-sm pointer" data-toggle="modal" data-target="#modalDialogo">Eliminar</a>
                     </div>
                   </div>

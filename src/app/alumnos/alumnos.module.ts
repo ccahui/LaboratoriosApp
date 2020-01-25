@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { ListarComponent } from './listar/listar.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { CompartirModule } from '../compartir/compartir.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { CompartirModule } from '../compartir/compartir.module';
     CommonModule,
     AlumnosRoutingModule,
     FormsModule,
-    CompartirModule
+    CompartirModule,
   ]
 })
 export class AlumnosModule { }

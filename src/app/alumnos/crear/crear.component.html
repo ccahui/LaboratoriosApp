@@ -36,11 +36,9 @@
                 <div class="form-group row">
                     <label class="col-md-2 col-form-label">Tercio</label>
                     <div class="col-md-10">
-                        <select class="custom-select col-12">
+                        <select class="custom-select col-12" name="grupo_id">
                             <option selected="">Elegir...</option>
-                            <option value="1">1er</option>
-                            <option value="2">2do</option>
-                            <option value="3">3er</option>
+                            <option *ngFor="let grupo of grupos" [value]="grupo.id">{{ grupo.numero }}</option>
                         </select>
                     </div>
                 </div>

@@ -8,40 +8,38 @@
                 </div>
             </div>
 
-            
+            <div *ngIf="alumno">
             <form class="form">
                 <div class="form-group m-t-20 row">
                     <label class="col-md-2 col-form-label">Cui*</label>
                     <div class="col-md-10">
-                        <input class="form-control" value="Artisanal kale">
+                        <input class="form-control" [value]="alumno.cui">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2 col-form-label">Nombres*</label>
                     <div class="col-md-10">
-                        <input class="form-control" value="How do I shoot web">
+                        <input class="form-control" [value]="alumno.nombre">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2 col-form-label">Apellidos</label>
                     <div class="col-md-10">
-                        <input class="form-control" value="bootstrap@example.com">
+                        <input class="form-control" [value]="alumno.apellido">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2 col-form-label">Email</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="email" value="https://getbootstrap.com">
+                        <input class="form-control" type="email" [value]="alumno.gmail">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2 col-form-label">Tercio</label>
                     <div class="col-md-10">
                         <select class="custom-select col-12">
-                            <option selected="">Elegir...</option>
-                            <option value="1" selected>1er</option>
-                            <option value="2">2do</option>
-                            <option value="3">3er</option>
+                            <option selected="" selected>Elegir...</option>
+                            <option *ngFor="let grupo of grupos" [value]="grupo.id">{{ grupo.numero }}</option>
                         </select>
                     </div>
                 </div>
@@ -58,7 +56,7 @@
                 <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Guardar Cambios</button>
                 <a appBackButton class="btn btn-inverse waves-effect waves-light text-white">Cancelar</a>
             </form>
-            
+        </div>
         </div>
     </div>
 </div>
