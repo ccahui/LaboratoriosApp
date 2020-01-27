@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AlumnoService } from '../../services/alumno.service';
 import { Alumno } from '../../modelos/alumno.models';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-listar',
@@ -10,17 +11,11 @@ import { map } from 'rxjs/operators';
   styles: []
 })
 export class ListarComponent implements OnInit {
-
-
   file;
-  alumnos$: Observable<Alumno[]>;
 
   constructor(private alumno: AlumnoService) { }
 
   ngOnInit() {
-    this.alumnos$ = this.alumno.obtenerAlumnos().pipe(
-      map(response => response.data)
-    );
   }
   eliminar() {
     console.log('Eliminado');
@@ -34,4 +29,5 @@ export class ListarComponent implements OnInit {
   }
 
 }
+
 

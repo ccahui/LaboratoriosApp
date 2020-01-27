@@ -13,9 +13,11 @@ export class AlumnoService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerAlumnos(): Observable<ResponseAlumnos> {
-    const urlRecurso = this.generarApiUrl('/alumnos');
-    return this.http.get<ResponseAlumnos>(urlRecurso);
+  obtenerAlumnos(page = 1): Observable<ResponseAlumnos> {
+    const urlRecurso = this.generarApiUrl(`/alumnos?page=${page}`);
+    return this.http.get<ResponseAlumnos>(urlRecurso).pipe(
+      delay(1000)
+    );
   }
 
   obtenerAlumnoPorId(id: string): Observable<Alumno> {
