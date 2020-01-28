@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { Observable } from 'rxjs';
-import { ResponseAlumnos, ResponseAlumnoDetalle, Alumno} from '../modelos/alumno.models';
+import { Observable, throwError, of } from 'rxjs';
+import { ResponseAlumnos, ResponseAlumnoDetalle, Alumno } from '../modelos/alumno.models';
 import { map, delay } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class AlumnoService {
   obtenerAlumnos(page = 1): Observable<ResponseAlumnos> {
     const urlRecurso = this.generarApiUrl(`/alumnos?page=${page}`);
     return this.http.get<ResponseAlumnos>(urlRecurso).pipe(
-      delay(1000)
+   //   delay(2000)
     );
   }
 
