@@ -1,14 +1,10 @@
-import { Grupo } from './grupo.models';
 
-export interface Alumno {
-    id?: number;
+export interface Profesor {
+    id: number;
     nombre: string;
     apellido: string;
-    cui: string;
     gmail: string;
-    autorizacion?: boolean;
-    matriculado?: boolean;
-    grupo?: Grupo;
+    descripcion: string;
 }
 
 export interface Links {
@@ -28,16 +24,16 @@ export interface Paginacion {
     total: number;
 }
 
-export interface ResponseAlumnos {
+export interface ResponseProfesores {
     ok: boolean;
     message: string;
-    data: Alumno[];
+    data: Profesor[];
     links: Links;
     meta: Paginacion;
 }
 
-export interface ResponseAlumnoDetalle {
+export interface ResponseProfesorDetalle {
     ok: boolean;
     message: string;
-    data: Alumno;
+    data: Profesor;
 }

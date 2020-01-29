@@ -8,15 +8,18 @@ import { EditarComponent } from './editar/editar.component';
 import { FormsModule } from '@angular/forms';
 import { DetalleComponent } from './detalle/detalle.component';
 import { CompartirModule } from '../compartir/compartir.module';
+import { TableComponent } from './listar/table/table.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
-  declarations: [ListarComponent, CrearComponent, EditarComponent, DetalleComponent],
+  declarations: [ListarComponent, CrearComponent, EditarComponent, DetalleComponent, TableComponent],
   imports: [
     CommonModule,
     ProfesoresRoutingModule,
     FormsModule,
-    CompartirModule
+    CompartirModule,
+    MaterialModule
   ]
 })
 export class ProfesoresModule { }

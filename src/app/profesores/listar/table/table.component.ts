@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AlumnoService } from '../../../services/alumno.service';
-import { MatTableDataSource, MatPaginator } from '@angular/material';
-import { Alumno, ResponseAlumnos } from '../../../modelos/alumno.models';
+import {  MatPaginator } from '@angular/material';
+import { Profesor, ResponseProfesores } from '../../../modelos/profesor.models';
 import { StatusResponse } from '../../../modelos/status.model';
 import { catchError, tap, map, switchMap } from 'rxjs/operators';
 import { of, Observable } from 'rxjs';
+import { ProfesorService } from '../../../services/profesor.service';
 
 @Component({
   selector: 'app-table',
@@ -14,27 +14,27 @@ import { of, Observable } from 'rxjs';
 export class TableComponent implements OnInit {
 
 
-  displayedColumns: string[] = ['cui', 'apellidos', 'nombre', 'tercio', 'autorizar', 'habilitado', 'accion'];
-  dataSource: Alumno[];
+  displayedColumns: string[] = ['apellidos', 'nombre', 'gmail', 'accion'];
+  dataSource: Profesor[];
 
   statusResponse: StatusResponse = { isLoading: true };
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-  constructor(private alumno: AlumnoService) { }
+  constructor(private profesor: ProfesorService) { }
 
   ngOnInit() {
-    this.obtenerAlumnos().subscribe(data => this.dataSource = data, () => this.error());
+    this.obtenerProfesores().subscribe(data => this.dataSource = data, () => this.error());
 
     this.paginator.page.pipe(
-      switchMap(() => this.obtenerAlumnos()))
+      switchMap(() => this.obtenerProfesores()))
       .subscribe(data => this.dataSource = data, () => this.error());
   }
 
-  obtenerAlumnos(): Observable<Alumno[]> {
+  obtenerProfesores(): Observable<Profesor[]> {
     this.iniciarSolicitud();
     const page = this.pageActual();
 
-    return this.alumno.obtenerAlumnos(page).pipe(
+    return this.profesor.obtenerProfesores(page).pipe(
       map((response) => {
         this.success(response);
         return response.data;
@@ -45,7 +45,7 @@ export class TableComponent implements OnInit {
     this.statusResponse.isLoading = true;
   }
 
-  private success(response: ResponseAlumnos) {
+  private success(response: ResponseProfesores) {
     this.statusResponse.isLoading = false;
     this.statusResponse.isError = false;
     this.paginator.length = response.meta.total;

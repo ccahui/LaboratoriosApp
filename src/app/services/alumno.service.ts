@@ -16,7 +16,7 @@ export class AlumnoService {
   obtenerAlumnos(page = 1): Observable<ResponseAlumnos> {
     const urlRecurso = this.generarApiUrl(`/alumnos?page=${page}`);
     return this.http.get<ResponseAlumnos>(urlRecurso).pipe(
-   //   delay(2000)
+      delay(1000)
     );
   }
 
@@ -26,6 +26,12 @@ export class AlumnoService {
       map(response => response.data));
   }
 
+  store(alumno: Alumno): Observable<Alumno> {
+    const urlRecurso = this.generarApiUrl('/alumnos');
+    return this.http.post<ResponseAlumnoDetalle>(urlRecurso, alumno).pipe(
+      map(response => response.data)
+    );
+  }
   generarApiUrl(recurso: string) {
     return this.apiUrl + recurso;
   }

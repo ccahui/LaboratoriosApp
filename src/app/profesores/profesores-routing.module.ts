@@ -14,7 +14,7 @@ const routes: Routes = [
   }, {
     path: 'detalle', component: DetalleComponent,
   },  {
-    path: ':id', component: EditarComponent,
+    path: 'editar/:id', component: EditarComponent,
   }
 ];
 
