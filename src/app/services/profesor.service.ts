@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ResponseProfesores, ResponseProfesorDetalle, Profesor } from '../modelos/profesor.models';
+import { ResponseProfesores, ResponseProfesor, Profesor as Data } from '../modelos/response/profesor.models';
 import { delay, map } from 'rxjs/operators';
 
 @Injectable({
@@ -22,9 +22,9 @@ export class ProfesorService {
     );
   }
 
-  obtenerProfesorPorId(id: string): Observable<Profesor> {
+  obtenerProfesorPorId(id: string): Observable<Data> {
     const urlRecurso = this.generarApiUrl(`/profesores/${id}`);
-    return this.http.get<ResponseProfesorDetalle>(urlRecurso).pipe(
+    return this.http.get<ResponseProfesor>(urlRecurso).pipe(
       map(response => response.data));
   }
 

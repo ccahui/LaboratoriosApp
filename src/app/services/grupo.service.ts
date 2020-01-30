@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Grupo, ResponseGrupos, ResponseGrupoDetalle } from '../modelos/grupo.models';
+import { ResponseGrupos, ResponseGrupo, Grupo } from '../modelos/response/grupo.models';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -23,7 +23,7 @@ export class GrupoService {
 
   obtenerGrupoPorId(id: string): Observable<Grupo> {
     const urlRecurso = this.generarApiUrl(`/grupos/${id}`);
-    return this.http.get<ResponseGrupoDetalle>(urlRecurso).pipe(
+    return this.http.get<ResponseGrupo>(urlRecurso).pipe(
       map(response => response.data));
   }
 

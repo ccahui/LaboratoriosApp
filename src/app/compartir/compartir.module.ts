@@ -6,10 +6,11 @@ import { HeaderComponent } from './header/header.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { RouterModule } from '@angular/router';
 import { BackButtonDirective } from '../directivas/back-button.directive';
+import { ErrorValidationComponent } from './error-validation/error-validation.component';
 
 
 @NgModule({
-  declarations: [SidebarComponent, Error404Component, HeaderComponent, BreadcrumbComponent, BackButtonDirective],
+  declarations: [SidebarComponent, Error404Component, HeaderComponent, BreadcrumbComponent, BackButtonDirective, ErrorValidationComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -19,7 +20,8 @@ import { BackButtonDirective } from '../directivas/back-button.directive';
         HeaderComponent,
         SidebarComponent,
         BreadcrumbComponent,
-        BackButtonDirective
+        BackButtonDirective,
+        ErrorValidationComponent
   ]
 })
 export class CompartirModule { }

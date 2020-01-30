@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {  MatPaginator } from '@angular/material';
-import { Profesor, ResponseProfesores } from '../../../modelos/profesor.models';
-import { StatusResponse } from '../../../modelos/status.model';
-import { catchError, tap, map, switchMap } from 'rxjs/operators';
-import { of, Observable } from 'rxjs';
+import { Profesor, ResponseProfesores } from '../../../modelos/response/profesor.models';
+import { StatusResponse } from '../../../modelos/response/status.model';
+import { map, switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { ProfesorService } from '../../../services/profesor.service';
 
 @Component({

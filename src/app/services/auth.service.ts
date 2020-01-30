@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { delay, tap, map } from 'rxjs/operators';
 import { of, Observable } from 'rxjs';
-import { Usuario, Role } from '../modelos/usuario.models';
-import { menuAlumno, menuAdmin, menuDocente } from '../modelos/roles.menus';
+import { Usuario, Role } from '../modelos/response/usuario.models';
+import { menuAlumno, menuAdmin, menuDocente } from '../modelos/response/roles.menus';
 import { Router } from '@angular/router';
 
 

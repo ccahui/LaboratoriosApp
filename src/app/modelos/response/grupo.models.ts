@@ -12,7 +12,7 @@ export interface ResponseGrupos {
     data: Grupo[];
 }
 
-export interface ResponseGrupoDetalle {
+export interface ResponseGrupo {
     ok: boolean;
     message: string;
     data: Grupo;

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Alumno } from '../../modelos/alumno.models';
+import { Alumno } from '../../modelos/response/alumno.models';
 import { AlumnoService } from '../../services/alumno.service';
 import { ActivatedRoute } from '@angular/router';
-import { Grupo } from '../../modelos/grupo.models';
+import { Grupo } from '../../modelos/response/grupo.models';
 import { GrupoService } from '../../services/grupo.service';
 
 @Component({

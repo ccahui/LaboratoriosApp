@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AlumnoService } from '../../../services/alumno.service';
-import { MatTableDataSource, MatPaginator } from '@angular/material';
-import { Alumno, ResponseAlumnos } from '../../../modelos/alumno.models';
-import { StatusResponse } from '../../../modelos/status.model';
-import { catchError, tap, map, switchMap } from 'rxjs/operators';
-import { of, Observable } from 'rxjs';
+import { MatPaginator } from '@angular/material';
+import { Alumno, ResponseAlumnos } from '../../../modelos/response/alumno.models';
+import { StatusResponse } from '../../../modelos/response/status.model';
+import { map, switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-table',

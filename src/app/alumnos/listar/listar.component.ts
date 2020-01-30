@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AlumnoService } from '../../services/alumno.service';
-import { Alumno } from '../../modelos/alumno.models';
+import { Alumno } from '../../modelos/response/alumno.models';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
