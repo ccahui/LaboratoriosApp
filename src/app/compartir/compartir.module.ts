@@ -7,21 +7,25 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { RouterModule } from '@angular/router';
 import { BackButtonDirective } from '../directivas/back-button.directive';
 import { ErrorValidationComponent } from './error-validation/error-validation.component';
+import { NotificacionComponent } from './notificacion/notificacion.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
-  declarations: [SidebarComponent, Error404Component, HeaderComponent, BreadcrumbComponent, BackButtonDirective, ErrorValidationComponent],
+  declarations: [SidebarComponent, Error404Component, HeaderComponent, BreadcrumbComponent, BackButtonDirective,
+     ErrorValidationComponent, NotificacionComponent],
   imports: [
     CommonModule,
     RouterModule,
+    MaterialModule
   ],
   exports: [
-        Error404Component,
-        HeaderComponent,
-        SidebarComponent,
-        BreadcrumbComponent,
-        BackButtonDirective,
-        ErrorValidationComponent
+    Error404Component,
+    HeaderComponent,
+    SidebarComponent,
+    BreadcrumbComponent,
+    BackButtonDirective,
+    ErrorValidationComponent
   ]
 })
 export class CompartirModule { }

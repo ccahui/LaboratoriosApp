@@ -10,9 +10,11 @@ import { DetalleComponent } from './detalle/detalle.component';
 import { CompartirModule } from '../compartir/compartir.module';
 import { TableComponent } from './listar/table/table.component';
 import { MaterialModule } from '../material/material.module';
+import { NotificacionComponent } from '../compartir/notificacion/notificacion.component';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
 
 @NgModule({
-  declarations: [CrearComponent, EditarComponent, ListarComponent, DetalleComponent,  TableComponent],
+  declarations: [CrearComponent, EditarComponent, ListarComponent, DetalleComponent, TableComponent],
   imports: [
     CommonModule,
     AlumnosRoutingModule,
@@ -20,6 +22,18 @@ import { MaterialModule } from '../material/material.module';
     ReactiveFormsModule,
     CompartirModule,
     MaterialModule
+  ],
+  entryComponents: [NotificacionComponent],
+  providers: [
+    {
+      provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
+      useValue: {
+        duration: 1500,
+        horizontalPosition: 'right',
+        verticalPosition: 'top'
+      }
+    }
   ]
+
 })
 export class AlumnosModule { }

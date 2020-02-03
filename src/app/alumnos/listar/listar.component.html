@@ -1,3 +1,19 @@
+
+<mat-form-field>
+  <input matInput value="Disco party!" placeholder="Message" #message>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput value="Dance" placeholder="Action" #action>
+</mat-form-field>
+<mat-icon aria-hidden="false" aria-label="Example home icon">check_circle</mat-icon>
+<mat-icon aria-hidden="false" aria-label="Example home icon">done</mat-icon>
+<mat-icon aria-hidden="false" aria-label="Example home icon">warn</mat-icon>
+<mat-icon aria-hidden="false" aria-label="Example home icon">info</mat-icon>
+
+
+
+<button mat-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
 <mat-card class="mat-elevation-z8">
 
   <h4 class="card-title">Alumnos Registrados</h4>

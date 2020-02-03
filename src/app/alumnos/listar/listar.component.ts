@@ -4,6 +4,8 @@ import { Alumno } from '../../modelos/response/alumno.models';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { NotificacionComponent, DataNotificacion } from 'src/app/compartir/notificacion/notificacion.component';
 
 @Component({
   selector: 'app-listar',
@@ -13,7 +15,7 @@ import { MatPaginator, MatTableDataSource } from '@angular/material';
 export class ListarComponent implements OnInit {
   file;
 
-  constructor(private alumno: AlumnoService) { }
+  constructor(private alumno: AlumnoService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -28,6 +30,15 @@ export class ListarComponent implements OnInit {
     console.log('Reset File');
   }
 
+  openSnackBar(message: string, action: string) {
+
+    const data: DataNotificacion = {
+      tipo: 'error',
+    };
+    this.snackBar.openFromComponent(NotificacionComponent, {
+      data
+    });
+  }
 }
 
 

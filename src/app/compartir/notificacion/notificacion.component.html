@@ -1,0 +1,8 @@
+<!-- Esse carinha é a snackbar -->
+<div>
+
+    <mat-icon *ngIf="data.tipo == success"class="success">check_circle</mat-icon>
+    <mat-icon *ngIf="data.tipo === error" class="error">error</mat-icon>
+    <span class="contenido" >{{data.message}}</span>
+
+</div>
