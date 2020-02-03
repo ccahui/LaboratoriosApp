@@ -30,7 +30,17 @@ export class ListarComponent implements OnInit {
     console.log('Reset File');
   }
 
-  openSnackBar(message: string, action: string) {
+  openSnackBarSuccess() {
+
+    const data: DataNotificacion = {
+      tipo: 'success',
+    };
+    this.snackBar.openFromComponent(NotificacionComponent, {
+      data
+    });
+  }
+
+  openSnackBarError() {
 
     const data: DataNotificacion = {
       tipo: 'error',

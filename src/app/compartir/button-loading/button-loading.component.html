@@ -1,0 +1,2 @@
+<button *ngIf="loading === false" type="submit" class="btn btn-success waves-effect waves-light m-r-10">{{value | titlecase}}</button>
+<button *ngIf="loading" type="button" class="btn btn-success waves-effect waves-light m-r-10"><i class="fa fa-spinner fa-pulse fa-spin"></i> {{value | titlecase}} ...</button>

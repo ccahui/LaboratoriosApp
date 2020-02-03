@@ -32,7 +32,8 @@ export class AlumnoService {
   store(alumno: Alumno): Observable<Data> {
     const urlRecurso = this.generarApiUrl('/alumnos');
     return this.http.post<ResponseAlumno>(urlRecurso, alumno).pipe(
-      map(response => response.data)
+      map(response => response.data),
+      delay(2000)
     );
   }
 

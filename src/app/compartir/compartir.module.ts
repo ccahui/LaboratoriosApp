@@ -9,11 +9,12 @@ import { BackButtonDirective } from '../directivas/back-button.directive';
 import { ErrorValidationComponent } from './error-validation/error-validation.component';
 import { NotificacionComponent } from './notificacion/notificacion.component';
 import { MaterialModule } from '../material/material.module';
+import { ButtonLoadingComponent } from './button-loading/button-loading.component';
 
 
 @NgModule({
   declarations: [SidebarComponent, Error404Component, HeaderComponent, BreadcrumbComponent, BackButtonDirective,
-     ErrorValidationComponent, NotificacionComponent],
+     ErrorValidationComponent, NotificacionComponent, ButtonLoadingComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -25,7 +26,8 @@ import { MaterialModule } from '../material/material.module';
     SidebarComponent,
     BreadcrumbComponent,
     BackButtonDirective,
-    ErrorValidationComponent
+    ErrorValidationComponent,
+    ButtonLoadingComponent,
   ]
 })
 export class CompartirModule { }

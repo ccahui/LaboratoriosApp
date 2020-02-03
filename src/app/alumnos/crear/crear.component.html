@@ -1,55 +1,55 @@
 <div>
-    
+
 </div>
 <div class="col-md-8">
-    <div class="card">
-        <div class="card-body">
-            <div class="d-flex no-block align-items-center">
-                <div>
-                    <h4 class="card-title">Registrar</h4>
-                    <h6 class="card-subtitle"> Complete el formulario alumnos</h6>
-                </div>
-            </div>
-            <app-error-validation [errorValidations]="errorValidations"></app-error-validation>
-            
-            <form class="form" [formGroup]="form" (ngSubmit)="store()">
-                <div class="form-group m-t-20 row">
-                    <label class="col-md-2 col-form-label">Cui*</label>
-                    <div class="col-md-10">
-                        <input class="form-control" formControlName="cui">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-md-2 col-form-label">Nombres*</label>
-                    <div class="col-md-10">
-                        <input class="form-control" formControlName="nombre">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-md-2 col-form-label">Apellidos*</label>
-                    <div class="col-md-10">
-                        <input class="form-control" formControlName="apellido">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-md-2 col-form-label">Gmail*</label>
-                    <div class="col-md-10">
-                        <input class="form-control" formControlName="gmail">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-md-2 col-form-label">Tercio</label>
-                    <div class="col-md-10">
-                        <select class="custom-select col-12" formControlName="grupo_id">
-                            <option value="">Elegir...</option>
-                            <option *ngFor="let grupo of grupos" [value]="grupo.id">{{ grupo.numero }}</option>
-                        </select>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Registrar</button>
-                <a routerLink=".." class="btn btn-inverse waves-effect waves-light">Cancelar</a>
-            </form>
-            
+  <div class="card">
+    <div class="card-body">
+      <div class="d-flex no-block align-items-center">
+        <div>
+          <h4 class="card-title">Registrar</h4>
+          <h6 class="card-subtitle"> Complete el formulario alumnos</h6>
         </div>
+      </div>
+      <app-error-validation [errorValidations]="errorValidations"></app-error-validation>
+
+      <form class="form" [formGroup]="form" (ngSubmit)="store()">
+        <div class="form-group m-t-20 row">
+          <label class="col-md-2 col-form-label">Cui*</label>
+          <div class="col-md-10">
+            <input class="form-control" formControlName="cui">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label">Nombres*</label>
+          <div class="col-md-10">
+            <input class="form-control" formControlName="nombre">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label">Apellidos*</label>
+          <div class="col-md-10">
+            <input class="form-control" formControlName="apellido">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label">Gmail*</label>
+          <div class="col-md-10">
+            <input class="form-control" formControlName="gmail">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label">Tercio</label>
+          <div class="col-md-10">
+            <select class="custom-select col-12" formControlName="grupo_id">
+              <option value="">Elegir...</option>
+              <option *ngFor="let grupo of grupos" [value]="grupo.id">{{ grupo.numero }}</option>
+            </select>
+          </div>
+        </div>
+        <app-button-loading [loading]="loading" value="registrar"></app-button-loading>
+        <a routerLink=".." class="btn btn-inverse waves-effect waves-light">Cancelar</a>
+      </form>
+
     </div>
+  </div>
 </div>
