@@ -15,11 +15,23 @@ export class DetalleComponent implements OnInit {
   constructor(private alumnoService: AlumnoService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    const alumnoId = this.route.snapshot.paramMap.get('id');
-    this.alumnoService.obtenerAlumnoPorId(alumnoId).subscribe(alumno => {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.alumno = {
+      id,
+      cui: '',
+      nombre: '',
+      apellido: '',
+      gmail: '',
+      grupo: null,
+      autorizacion: null,
+      matriculado: null,
+    };
+
+    this.alumnoService.obtenerAlumnoPorId(id).subscribe(alumno => {
       this.alumno = alumno;
     });
   }
+
 
 
 }

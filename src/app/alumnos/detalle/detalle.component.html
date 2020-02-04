@@ -2,7 +2,7 @@
   <div class="card-body">
     <form class="form-horizontal" role="form">
       <div class="form-body">
-        <a routerLink="../editar/5" class="btn btn-danger mr-2 btn-rounded float-right"> <i class="fa fa-pencil"></i> Editar</a>
+        <a [routerLink]="['..','editar',alumno.id]" class="btn btn-danger mr-2 btn-rounded float-right"> <i class="fa fa-pencil"></i> Editar</a>
 
         <h3>Información Personal</h3>
         <h6 class="card-subtitle">Informacion personal alumno</h6>
@@ -69,7 +69,10 @@
             <div class="form-group row">
               <label class="control-label text-md-right col-md-3">Estado:</label>
               <div class="col-md-9">
-                <p class="form-control-static"> Habilitado </p>
+                <p class="form-control-static"> 
+                  <span *ngIf="alumno.autorizacion === true"> Habilitado</span>
+                  <span *ngIf="alumno.autorizacion === false"> Desabilitado</span>  
+                </p>
               </div>
             </div>
           </div>

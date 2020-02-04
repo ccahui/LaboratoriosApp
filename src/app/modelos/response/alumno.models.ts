@@ -2,7 +2,7 @@ import { Grupo } from './grupo.models';
 import { Links, Pagination } from './pagination.models';
 
 export interface Alumno {
-    id: number;
+    id: string;
     nombre: string;
     apellido: string;
     cui: string;

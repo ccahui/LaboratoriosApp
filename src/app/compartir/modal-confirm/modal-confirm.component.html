@@ -1,0 +1,9 @@
+
+<div mat-dialog-content>
+  <h4 class="text-center">¿Estas seguro de desear eliminar?</h4>
+</div>
+<div class="modal-footer"> 
+  <button class="btn btn-primary w-50" [mat-dialog-close]="true">Si</button>
+  <button class="btn btn-light w-50" (click)="onNoClick()" cdkFocusInitial>No</button>
+</div>
+

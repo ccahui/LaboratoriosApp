@@ -7,7 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material';
+import {MatInputModule, MatDialogModule} from '@angular/material';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule, SimpleSnackBar} from '@angular/material/snack-bar';
@@ -25,6 +25,7 @@ import {MatSnackBarModule, SimpleSnackBar} from '@angular/material/snack-bar';
     MatInputModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
+    MatDialogModule,
   ],
   exports: [
     MatTableModule,
@@ -38,6 +39,7 @@ import {MatSnackBarModule, SimpleSnackBar} from '@angular/material/snack-bar';
     MatInputModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
+    MatDialogModule,
   ]
 })
 export class MaterialModule { }

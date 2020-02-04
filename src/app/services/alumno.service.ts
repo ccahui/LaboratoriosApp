@@ -19,14 +19,14 @@ export class AlumnoService {
   obtenerAlumnos(page = 1): Observable<ResponseAlumnos> {
     const urlRecurso = this.generarApiUrl(`/alumnos?page=${page}`);
     return this.http.get<ResponseAlumnos>(urlRecurso).pipe(
-      delay(1000)
     );
   }
 
   obtenerAlumnoPorId(id: string): Observable<Data> {
     const urlRecurso = this.generarApiUrl(`/alumnos/${id}`);
     return this.http.get<ResponseAlumno>(urlRecurso).pipe(
-      map(response => response.data));
+      map(response => response.data),
+      delay(2000));
   }
 
   store(alumno: Alumno): Observable<Data> {
@@ -36,6 +36,22 @@ export class AlumnoService {
       delay(2000)
     );
   }
+  update(id, data: any): Observable<Data> {
+    console.log(data);
+    const urlRecurso = this.generarApiUrl(`/alumnos/${id}`);
+    return this.http.put<ResponseAlumno>(urlRecurso, data).pipe(
+      map(response => response.data),
+      delay(2000)
+    );
+  }
+  delete(id): Observable<Data> {
+    const urlRecurso = this.generarApiUrl(`/alumnos/${id}`);
+    return this.http.delete<ResponseAlumno>(urlRecurso).pipe(
+      map(response => response.data),
+    );
+  }
+
+
 
   generarApiUrl(recurso: string) {
     return this.apiUrl + recurso;

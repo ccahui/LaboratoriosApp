@@ -12,6 +12,7 @@ import { TableComponent } from './listar/table/table.component';
 import { MaterialModule } from '../material/material.module';
 import { NotificacionComponent } from '../compartir/notificacion/notificacion.component';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
+import { ModalConfirmComponent } from '../compartir/modal-confirm/modal-confirm.component';
 
 @NgModule({
   declarations: [CrearComponent, EditarComponent, ListarComponent, DetalleComponent, TableComponent],
@@ -23,7 +24,7 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
     CompartirModule,
     MaterialModule
   ],
-  entryComponents: [NotificacionComponent],
+  entryComponents: [NotificacionComponent, ModalConfirmComponent],
   providers: [
     {
       provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
