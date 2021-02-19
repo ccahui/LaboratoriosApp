@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AlumnoService } from '../../../services/alumno.service';
-import { MatPaginator, MatDialog, DialogPosition } from '@angular/material';
+import { MatDialog, DialogPosition } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
 import { Alumno, ResponseAlumnos } from '../../../modelos/response/alumno.models';
 import { StatusResponse } from '../../../modelos/response/status.model';
 import { map, switchMap, takeLast, filter } from 'rxjs/operators';

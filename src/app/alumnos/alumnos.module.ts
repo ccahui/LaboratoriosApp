@@ -11,7 +11,7 @@ import { CompartirModule } from '../compartir/compartir.module';
 import { TableComponent } from './listar/table/table.component';
 import { MaterialModule } from '../material/material.module';
 import { NotificacionComponent } from '../compartir/notificacion/notificacion.component';
-import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { ModalConfirmComponent } from '../compartir/modal-confirm/modal-confirm.component';
 
 @NgModule({

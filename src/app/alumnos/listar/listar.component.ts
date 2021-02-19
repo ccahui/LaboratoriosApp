@@ -3,7 +3,8 @@ import { AlumnoService } from '../../services/alumno.service';
 import { Alumno } from '../../modelos/response/alumno.models';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NotificacionComponent, DataNotificacion } from 'src/app/compartir/notificacion/notificacion.component';
 

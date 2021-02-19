@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlumnosComponent implements OnInit {
 
+  file:any;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  resetFile(){
+    this.file = null;
+  }
+  cargarArchivoExcel(){
+    console.log("Subiendo");
+  }
+  eliminar(){
+    console.log("eliminar");
   }
 
 }

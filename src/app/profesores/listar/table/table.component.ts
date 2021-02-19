@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {  MatPaginator } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
 import { Profesor, ResponseProfesores } from '../../../modelos/response/profesor.models';
 import { StatusResponse } from '../../../modelos/response/status.model';
 import { map, switchMap } from 'rxjs/operators';
